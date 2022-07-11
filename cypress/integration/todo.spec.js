@@ -3,7 +3,7 @@
 describe('example to-do app', () => {
   beforeEach(() => {
     
-    cy.visit('https://automationteststore.com/')
+    cy.visit('https://victorious-wave-093b83610.1.azurestaticapps.net/#/login')
   })
 
   it('Test Case', () => {
