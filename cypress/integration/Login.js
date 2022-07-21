@@ -6,18 +6,29 @@ describe('Login', () => {
     cy.visit('https://victorious-wave-093b83610.1.azurestaticapps.net/#/login')
   })
 
+ 
 
 
 
 
 
 
-  it.only('Admin login', function(){
+
+
+  it('Admin login', function(){
     cy.get('#email-address').clear().type("grigoras.nadia146@gmail.com").wait(500)
     cy.get('#password').clear().type("BCXNQ932").wait(500)
     cy.get('.sc-iqAclL').click().wait(500)
     cy.url().should('eq', 'https://victorious-wave-093b83610.1.azurestaticapps.net/#/dashboard')
 
+    cy.get('.sc-gtsrHT > svg').click()
+    
+      cy.get('.sc-gKAaRy')
+      .should('contain', 'Dashboard')
+      .and('contain','Issues')
+      .and('contain', 'Users')
+      .and('contain', 'Zones')
+      .and('contain', 'Map')
   })
 
 
@@ -30,6 +41,13 @@ describe('Login', () => {
      cy.get('#password').type("assist12345.").wait(500)
      cy.get('.sc-iqAclL').click().wait(500)
      cy.url().should('eq', 'https://victorious-wave-093b83610.1.azurestaticapps.net/#/issues')
+
+     cy.get('.sc-gtsrHT > svg').click()
+    
+     cy.get('.sc-gKAaRy')
+     .should('contain', 'Issues')
+     .and('contain', 'Users')
+     .and('contain', 'Map')
  
    })
 
@@ -44,6 +62,13 @@ describe('Login', () => {
         cy.get('#password').clear().type("assist12345.").wait(500)
         cy.get('.sc-iqAclL').click().wait(500)
         cy.url().should('eq', 'https://victorious-wave-093b83610.1.azurestaticapps.net/#/issues')
+
+        cy.get('.sc-gtsrHT > svg').click()
+    
+        cy.get('.sc-gKAaRy')
+        .should('contain', 'Issues')
+        .and('contain', 'Map')
+    
     
       })
  
@@ -60,6 +85,12 @@ describe('Login', () => {
         cy.get('#password').type("STPW82DK").wait(500)
         cy.get('.sc-iqAclL').click().wait(500)
         cy.url().should('eq', 'https://victorious-wave-093b83610.1.azurestaticapps.net/#/issues')
+
+        cy.get('.sc-gtsrHT > svg').click()
+    
+        cy.get('.sc-gKAaRy')
+        .should('contain', 'Issues')
+        .and('contain', 'Map')
     
     
       })
