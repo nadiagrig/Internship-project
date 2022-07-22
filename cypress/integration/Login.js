@@ -23,8 +23,8 @@ describe('Login', () => {
 
     cy.get('.sc-gtsrHT > svg').click()
     
-      cy.get('.sc-gKAaRy')
-      .should('contain', 'Dashboard')
+      cy.get('.sc-gKAaRy') //click menu
+      .should('contain', 'Dashboard') //check the elements
       .and('contain','Issues')
       .and('contain', 'Users')
       .and('contain', 'Zones')
@@ -44,14 +44,15 @@ describe('Login', () => {
 
      cy.get('.sc-gtsrHT > svg').click()
     
-     cy.get('.sc-gKAaRy')
-     .should('contain', 'Issues')
+     cy.get('.sc-gKAaRy') //click menu
+     .should('contain', 'Issues') //check elements
      .and('contain', 'Users')
      .and('contain', 'Map')
  
    })
 
 
+   
 
 
 

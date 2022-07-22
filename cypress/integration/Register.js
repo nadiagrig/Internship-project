@@ -4,54 +4,12 @@
 
 const uuid = () => Cypress._.random(0, 1e6)
 const id = uuid()
-const testname = `testname${id}@yahoo.com`
+const testname = `email${id}@yahoo.com`
+const pswd= `pswd${id}`
 
 
 
-
-
-
-
-
-
-
-
-
-
-/*Cypress.Commands.add('register', (firstname, email, password) => {
-cy.get('.register').click()
-cy.get('#first-name').type(firstname)
-cy.get('#email-address').type(email)
-cy.get('#password').type(password)
-
-cy.get('.sc-iqAclL').click()
-cy.url().should('eq', 'https://victorious-wave-093b83610.1.azurestaticapps.net/#/login')
-
-})
-
-
-
-
-
-
-
-describe ('general data', () => {
-it ('should register', () => {
-cy.visit('https://victorious-wave-093b83610.1.azurestaticapps.net/#/register')
-cy.register('Nadia', testname, 'assist12345.')
-
-
-
-})
-
-})
-
-*/
-
-
-
-
-
+// *********************I didn't do anthing new from this morning, i mainly worked on Profile and Login*******************************
 
 
 
@@ -180,3 +138,54 @@ describe('CSS', () => {
 
 })
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//****************additional
+
+
+/*Cypress.Commands.add('register', (firstname, email, password) => {
+cy.get('.register').click()
+cy.get('#first-name').type(firstname)
+cy.get('#email-address').type(email)
+cy.get('#password').type(password)
+
+cy.get('.sc-iqAclL').click()
+cy.url().should('eq', 'https://victorious-wave-093b83610.1.azurestaticapps.net/#/login')
+
+})
+
+
+
+
+
+
+
+describe ('general data', () => {
+it ('should register', () => {
+cy.visit('https://victorious-wave-093b83610.1.azurestaticapps.net/#/register')
+cy.register('Nadia', testname, 'assist12345.')
+
+
+
+})
+
+})
+
+*/
