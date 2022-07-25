@@ -9,13 +9,6 @@ const pswd= `pswd${id}`
 
 
 
-// *********************I didn't do anthing new from this morning, i mainly worked on Profile and Login*******************************
-
-
-
-
-
-
 
 //functionality of register form
 describe('Register', () => {
@@ -32,10 +25,10 @@ describe('Register', () => {
                cy.get('#first-name').type("Nadia")
             cy.get('#last-name').type("Admin")
             cy.get('#email-address').type(testname) 
-            cy.get('#password').type("assist12345.")
+            cy.get('#password').type(pswd)
            // eye functionality
             cy.get('[data-for="password"] > #Capa_1').click() 
-            cy.get('#confirm-password').type("assist12345.")
+            cy.get('#confirm-password').type(pswd)
             cy.get('[data-for="confirmPassword"] > #Capa_1').click()
             cy.get('[data-for="password"] > #Capa_1').click()
             cy.get('[data-for="confirmPassword"] > #Capa_1').click()
@@ -55,10 +48,12 @@ describe('Register', () => {
             cy.get('#first-name').clear().type("Nadia")
          cy.get('#last-name').clear().type("Validator")
          cy.get('#email-address').clear().type(testname)
-         cy.get('#password').clear().type("assist12345.")
+         cy.get('#password').clear().type(pswd
+  )
           // eye functionality
          cy.get('[data-for="password"] > #Capa_1').click()
-         cy.get('#confirm-password').clear().type("assist12345.")
+         cy.get('#confirm-password').clear().type(pswd
+  )
          cy.get('[data-for="confirmPassword"] > #Capa_1').click()
          cy.get('[data-for="password"] > #Capa_1').click()
          cy.get('[data-for="confirmPassword"] > #Capa_1').click()
@@ -77,10 +72,10 @@ describe('Register', () => {
         cy.get('#first-name').clear().type("Nadia")
      cy.get('#last-name').clear().type("Agent")
      cy.get('#email-address').clear().type("agent@yahoo.com")
-     cy.get('#password').clear().type("assist12345.")
+     cy.get('#password').clear().type(pswd)
       // eye functionality
      cy.get('[data-for="password"] > #Capa_1').click()
-     cy.get('#confirm-password').clear().type("assist12345.")
+     cy.get('#confirm-password').clear().type(pswd)
      cy.get('[data-for="confirmPassword"] > #Capa_1').click()
      cy.get('[data-for="password"] > #Capa_1').click()
      cy.get('[data-for="confirmPassword"] > #Capa_1').click()
@@ -99,10 +94,10 @@ describe('Register', () => {
     cy.get('#first-name').clear().type("Nadia")
  cy.get('#last-name').clear().type("Citizen")
  cy.get('#email-address').clear().type("citizen@yahoo.com")
- cy.get('#password').clear().type("assist12345.")
+ cy.get('#password').clear().type(pswd)
   // eye functionality
  cy.get('[data-for="password"] > #Capa_1').click()
- cy.get('#confirm-password').clear().type("assist12345.")
+ cy.get('#confirm-password').clear().type(pswd)
  cy.get('[data-for="confirmPassword"] > #Capa_1').click()
  cy.get('[data-for="password"] > #Capa_1').click()
  cy.get('[data-for="confirmPassword"] > #Capa_1').click()

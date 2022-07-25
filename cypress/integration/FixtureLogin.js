@@ -1,21 +1,24 @@
 import Login from "./Classes/POMlogin";
 const loginpage = new Login();
 
-let example;
+let loginData;
+
 describe("Fixture", function () {
   before(function () {
     loginpage.navigate();
-    cy.fixture("loginFile.json").then(function (logdata) {
-      example = logdata;
+    cy.fixture("integration/classes/loginFiles.json").then(function (logdata) {
+      loginData = logdata;
     });
   });
 });
 
 it("Login with valid data", function () {
- 
-loginpage.Email.type(example.email)
-loginpage.Password.type(example.password)
-cy.log(example);
+  cy.log(loginData);
+  loginpage.Email.type(loginData.email);
+  loginpage.Password.type(loginData.password);
+
+  // cy.get(Email).type(loginData.email)
+  // cy.get(Password).type(loginData.password)
 
   cy.get(".sc-iqAclL").click();
   cy.url().should(
@@ -23,5 +26,3 @@ cy.log(example);
     "https://victorious-wave-093b83610.1.azurestaticapps.net/#/dashboard"
   );
 });
-
-
