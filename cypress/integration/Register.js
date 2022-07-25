@@ -4,57 +4,8 @@
 
 const uuid = () => Cypress._.random(0, 1e6)
 const id = uuid()
-const testname = `testname${id}@yahoo.com`
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*Cypress.Commands.add('register', (firstname, email, password) => {
-cy.get('.register').click()
-cy.get('#first-name').type(firstname)
-cy.get('#email-address').type(email)
-cy.get('#password').type(password)
-
-cy.get('.sc-iqAclL').click()
-cy.url().should('eq', 'https://victorious-wave-093b83610.1.azurestaticapps.net/#/login')
-
-})
-
-
-
-
-
-
-
-describe ('general data', () => {
-it ('should register', () => {
-cy.visit('https://victorious-wave-093b83610.1.azurestaticapps.net/#/register')
-cy.register('Nadia', testname, 'assist12345.')
-
-
-
-})
-
-})
-
-*/
-
-
-
-
-
-
-
-
+const testname = `email${id}@yahoo.com`
+const pswd= `pswd${id}`
 
 
 
@@ -74,10 +25,10 @@ describe('Register', () => {
                cy.get('#first-name').type("Nadia")
             cy.get('#last-name').type("Admin")
             cy.get('#email-address').type(testname) 
-            cy.get('#password').type("assist12345.")
+            cy.get('#password').type(pswd)
            // eye functionality
             cy.get('[data-for="password"] > #Capa_1').click() 
-            cy.get('#confirm-password').type("assist12345.")
+            cy.get('#confirm-password').type(pswd)
             cy.get('[data-for="confirmPassword"] > #Capa_1').click()
             cy.get('[data-for="password"] > #Capa_1').click()
             cy.get('[data-for="confirmPassword"] > #Capa_1').click()
@@ -97,10 +48,12 @@ describe('Register', () => {
             cy.get('#first-name').clear().type("Nadia")
          cy.get('#last-name').clear().type("Validator")
          cy.get('#email-address').clear().type(testname)
-         cy.get('#password').clear().type("assist12345.")
+         cy.get('#password').clear().type(pswd
+  )
           // eye functionality
          cy.get('[data-for="password"] > #Capa_1').click()
-         cy.get('#confirm-password').clear().type("assist12345.")
+         cy.get('#confirm-password').clear().type(pswd
+  )
          cy.get('[data-for="confirmPassword"] > #Capa_1').click()
          cy.get('[data-for="password"] > #Capa_1').click()
          cy.get('[data-for="confirmPassword"] > #Capa_1').click()
@@ -119,10 +72,10 @@ describe('Register', () => {
         cy.get('#first-name').clear().type("Nadia")
      cy.get('#last-name').clear().type("Agent")
      cy.get('#email-address').clear().type("agent@yahoo.com")
-     cy.get('#password').clear().type("assist12345.")
+     cy.get('#password').clear().type(pswd)
       // eye functionality
      cy.get('[data-for="password"] > #Capa_1').click()
-     cy.get('#confirm-password').clear().type("assist12345.")
+     cy.get('#confirm-password').clear().type(pswd)
      cy.get('[data-for="confirmPassword"] > #Capa_1').click()
      cy.get('[data-for="password"] > #Capa_1').click()
      cy.get('[data-for="confirmPassword"] > #Capa_1').click()
@@ -141,10 +94,10 @@ describe('Register', () => {
     cy.get('#first-name').clear().type("Nadia")
  cy.get('#last-name').clear().type("Citizen")
  cy.get('#email-address').clear().type("citizen@yahoo.com")
- cy.get('#password').clear().type("assist12345.")
+ cy.get('#password').clear().type(pswd)
   // eye functionality
  cy.get('[data-for="password"] > #Capa_1').click()
- cy.get('#confirm-password').clear().type("assist12345.")
+ cy.get('#confirm-password').clear().type(pswd)
  cy.get('[data-for="confirmPassword"] > #Capa_1').click()
  cy.get('[data-for="password"] > #Capa_1').click()
  cy.get('[data-for="confirmPassword"] > #Capa_1').click()
@@ -180,3 +133,54 @@ describe('CSS', () => {
 
 })
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//****************additional
+
+
+/*Cypress.Commands.add('register', (firstname, email, password) => {
+cy.get('.register').click()
+cy.get('#first-name').type(firstname)
+cy.get('#email-address').type(email)
+cy.get('#password').type(password)
+
+cy.get('.sc-iqAclL').click()
+cy.url().should('eq', 'https://victorious-wave-093b83610.1.azurestaticapps.net/#/login')
+
+})
+
+
+
+
+
+
+
+describe ('general data', () => {
+it ('should register', () => {
+cy.visit('https://victorious-wave-093b83610.1.azurestaticapps.net/#/register')
+cy.register('Nadia', testname, 'assist12345.')
+
+
+
+})
+
+})
+
+*/
